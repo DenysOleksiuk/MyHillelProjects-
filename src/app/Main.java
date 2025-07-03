@@ -9,13 +9,19 @@ public class Main {
         System.out.println("Version 1.0");
 
 
-        double celsius = 25.0;
+        double celsius = 25;
+        double klv = 300;
         double kelvin = toKelvin(celsius);
-        System.out.println("Result is: " + "Kelvin: " + kelvin);
+        double cls = toCelsius(klv);
+        System.out.println("Result is: " + "Kelvin: " + kelvin + "Celsius: " + cls);
 
     }
 
     private static double toKelvin(double celsius) {
         return celsius + CONV_T;
+    }
+
+    private static double toCelsius(double kelvin) {
+        return kelvin - CONV_T;
     }
 }
